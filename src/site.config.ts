@@ -3,11 +3,11 @@ import type { AstroExpressiveCodeOptions } from 'astro-expressive-code'
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: 'SRLEOM',
+	author: 'theSaviKing',
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: 'astro-theme-resume',
+	title: "T. Paul Kariuki's portfolio",
 	// Meta property used as the default description meta property
-	description: 'The official Astro Resume Theme',
+	description: 'The portfolio for T. Paul Kariuki (theSaviKing)',
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: 'en-GB',
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -37,7 +37,8 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 // https://expressive-code.com/reference/configuration/
 export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
 	// One dark, one light theme => https://expressive-code.com/guides/themes/#available-themes
-	themes: ['dracula', 'github-light'],
+	// themes: ['dracula', 'github-light'],
+	themes: ['vitesse-dark', 'solarized-light'],
 	themeCssSelector(theme, { styleVariants }) {
 		// If one dark and one light theme are available
 		// generate theme CSS selectors compatible with cactus-theme dark mode switch
@@ -49,7 +50,7 @@ export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
 		// return default selector
 		return `[data-theme="${theme.name}"]`
 	},
-	useThemedScrollbars: false,
+	useThemedScrollbars: true,
 	styleOverrides: {
 		frames: {
 			frameBoxShadowCssValue: 'none'
