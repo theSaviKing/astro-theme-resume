@@ -1,0 +1,16 @@
+{
+	"$schema": "./resume.schema.json",
+	"currentTitle": "Software Development Intern",
+	"location": "Minnesota",
+	"about": "<b>Eager software engineering enthusiast with experience in HTML/CSS/JavaScript, Java, and Python.</b> Seeking a software development internship that will challenge me, expand my skillset, and allow for real-world applications to technical skills learned. Dedicated to solving problems. Eager to contribute to a team. Committed to quick learning, taking initiative, and growing as a team player with leadership potential.",
+	"experience": [
+		{
+			"title": "Software Development Intern",
+			"company": "NISC",
+			"startDate": "Feb 2024",
+			"endDate": "present",
+			"details": []
+		}
+	],
+	"education": []
+}

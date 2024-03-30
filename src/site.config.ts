@@ -18,20 +18,20 @@ export const siteConfig: SiteConfig = {
 		options: {
 			day: 'numeric',
 			month: 'short',
-			year: 'numeric'
-		}
-	}
+			year: 'numeric',
+		},
+	},
 }
 
 export const menuLinks: Array<{ title: string; path: string }> = [
 	{
 		title: 'Home',
-		path: '/'
+		path: '/',
 	},
 	{
 		title: 'Blog',
-		path: '/blog/'
-	}
+		path: '/blog/',
+	},
 ]
 
 // https://expressive-code.com/reference/configuration/
@@ -53,7 +53,7 @@ export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
 	useThemedScrollbars: true,
 	styleOverrides: {
 		frames: {
-			frameBoxShadowCssValue: 'none'
+			frameBoxShadowCssValue: 'none',
 		},
 		uiLineHeight: 'inherit',
 		codeFontSize: '0.875rem',
@@ -61,6 +61,6 @@ export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
 		borderRadius: '4px',
 		codePaddingInline: '1rem',
 		codeFontFamily:
-			'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;'
-	}
+			'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;',
+	},
 }

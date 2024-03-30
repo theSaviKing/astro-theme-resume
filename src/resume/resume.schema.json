@@ -1,0 +1,109 @@
+{
+	"title": "Resume",
+	"type": "object",
+	"required": ["about", "experience", "education", "currentTitle", "location"],
+	"properties": {
+		"currentTitle": {
+			"type": "string"
+		},
+		"location": {
+			"type": "string"
+		},
+		"about": {
+			"type": "string",
+			"description": "The place you define yourself in your own words. Use it to put career choices in context, highlight your biggest achievements, or show off your personality."
+		},
+		"experience": {
+			"type": "array",
+			"items": {
+				"required": ["title", "company", "startDate", "endDate", "details"],
+				"properties": {
+					"title": {
+						"type": "string"
+					},
+					"company": {
+						"type": "string"
+					},
+					"startDate": {
+						"type": "string"
+					},
+					"endDate": {
+						"type": "string"
+					},
+					"details": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"education": {
+			"type": "array",
+			"items": {
+				"required": ["title", "byline", "startDate", "endDate", "details"],
+				"properties": {
+					"title": {
+						"type": "string"
+					},
+					"byline": {
+						"type": "string"
+					},
+					"startDate": {
+						"type": "string"
+					},
+					"endDate": {
+						"type": "string"
+					},
+					"details": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		},
+		"projects": {
+			"type": "array",
+			"items": {
+				"required": ["title", "subtitle", "link"],
+				"properties": {
+					"imageUrl": {
+						"type": "string"
+					},
+					"title": {
+						"type": "string"
+					},
+					"subtitle": {
+						"type": "string"
+					},
+					"link": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"certifications": {
+			"type": "array",
+			"items": {
+				"required": ["title", "byline", "startDate"],
+				"properties": {
+					"title": {
+						"type": "string"
+					},
+					"byline": {
+						"type": "string"
+					},
+					"startDate": {
+						"type": "string"
+					},
+					"endDate": {
+						"type": "string"
+					}
+				}
+			}
+		}
+	}
+}

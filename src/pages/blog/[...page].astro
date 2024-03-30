@@ -26,22 +26,22 @@ const { page, uniqueTags } = Astro.props
 
 const meta = {
 	description: 'Posts',
-	title: 'Blog'
+	title: 'Blog',
 }
 
 const paginationProps = {
 	...(page.url.prev && {
 		prevUrl: {
 			text: `← Previous Posts`,
-			url: page.url.prev
-		}
+			url: page.url.prev,
+		},
 	}),
 	...(page.url.next && {
 		nextUrl: {
 			text: `Next Posts →`,
-			url: page.url.next
-		}
-	})
+			url: page.url.next,
+		},
+	}),
 }
 ---
 
@@ -106,7 +106,12 @@ const paginationProps = {
 								))}
 							</ul>
 							<span class='mt-4 block sm:text-end'>
-								<a aria-label='View all blog categories' class='' href='/tags/' data-astro-prefetch>
+								<a
+									aria-label='View all blog categories'
+									class=''
+									href='/tags/'
+									data-astro-prefetch
+								>
 									View all →
 								</a>
 							</span>
