@@ -42,12 +42,12 @@
 		"education": {
 			"type": "array",
 			"items": {
-				"required": ["title", "byline", "startDate", "endDate", "details"],
+				"required": ["school", "degree", "startDate", "endDate", "details"],
 				"properties": {
-					"title": {
+					"school": {
 						"type": "string"
 					},
-					"byline": {
+					"degree": {
 						"type": "string"
 					},
 					"startDate": {

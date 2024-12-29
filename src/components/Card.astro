@@ -15,15 +15,22 @@ const {
 	imageClass,
 	icon: Icon,
 	iconClass,
-	logo,
+	logoPath,
 	logoAltText,
 	logoClass
 } = Astro.props
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
 
 if (imagePath) {
-	if (!images[imagePath])
+	if (!images[imagePath]) {
 		throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`)
+	}
+}
+
+if (logoPath) {
+	if (!logoPath[imagePath]) {
+		throw new Error(`"${logoPath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`)
+	}
 }
 ---
 
@@ -49,8 +56,8 @@ if (imagePath) {
 	<div class='flex flex-col gap-y-1.5'>
 		<div class='flex items-center justify-between'>
 			<div class='flex flex-col gap-y-0.5'>
-				<h1 class='text-lg font-medium'>{heading}</h1>
-				<h2 class='text-muted-foreground'>{subheading}</h2>
+				<h1 class='text-lg font-medium' set:html={heading} />
+				<h2 class='text-muted-foreground' set:html={subheading} />
 				<h2 class='text-muted-foreground' set:html={date.replace('-', '&ndash;')} />
 			</div>
 		</div>

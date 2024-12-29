@@ -151,7 +151,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					</Card>
 				))
 			}
-			<Card
+			<!-- <Card
 				heading='Software Development Intern'
 				subheading='Sit amet consectetur'
 				date='Dec 2022 - Nov 2023'
@@ -177,11 +177,30 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				date='Dec 2022 - Nov 2023'
 				icon={Icon}
 				iconClass='h-10 fill-primary md:-left-16'
-			/>
+			/> -->
 		</Section>
 
 		<Section title='Education'>
-			<Card
+			{
+				resume.education.map((edu) => (
+					<Card
+						heading={edu.school}
+						subheading={edu.degree}
+						date={`${edu.startDate} - ${edu.endDate}`}
+						icon={Icon}
+						iconClass='h-10 fill-primary md:-left-16'
+					>
+						{edu.details.length > 0 && (
+							<ul class='ml-4 list-disc text-muted-foreground'>
+								{edu.details.map((dt) => (
+									<li>{dt}</li>
+								))}
+							</ul>
+						)}
+					</Card>
+				))
+			}
+			<!-- <Card
 				heading='Lorem Ipsum'
 				subheading='Sit amet consectetur'
 				date='Dec 2022 - Nov 2023'
@@ -206,7 +225,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				date='Dec 2022 - Nov 2023'
 				icon={Icon}
 				iconClass='h-10 fill-primary md:-left-16'
-			/>
+			/> -->
 		</Section>
 
 		<Section title='Projects'>

@@ -6,11 +6,26 @@
 	"experience": [
 		{
 			"title": "Software Development Intern",
-			"company": "NISC",
+			"company": "NISC &mdash; Mandan, ND",
 			"startDate": "Feb 2024",
 			"endDate": "present",
+			"details": ["Maintained and updated end-user billing software"]
+		},
+		{
+			"title": "Network Intern (IT Department)",
+			"company": "Presbyterian Homes & Services &mdash; Roseville, MN",
+			"startDate": "May 2023",
+			"endDate": "Aug 2023",
 			"details": []
 		}
 	],
-	"education": []
+	"education": [
+		{
+			"school": "University of Mary",
+			"degree": "Bachelor of Science, Computer Information Systems",
+			"startDate": "Sep 2022",
+			"endDate": "Apr 2026",
+			"details": []
+		}
+	]
 }
